@@ -1,0 +1,343 @@
+
+/* START Library Page */
+
+/* Background */
+
+body.library {
+  background: linear-gradient(90deg, #67468a,#e4a9a8);
+  margin: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat:repeat;
+} 
+
+  /* Start Add button and Search Bar */
+body.library{
+  margin: 0%; 
+}
+
+.belowNav ul li {
+    display:inline-block;
+    justify-content: space-between;
+}
+ul li .searchForm{
+    display: inline-block;
+    justify-content: space-between;
+} 
+  #addBtn {
+    margin-top: 3%;
+    /* margin-left: auto; */
+    margin-left: 300%; 
+  }
+
+ #searchBtn {
+    background: #2C325A;
+    color: white;
+    font-size: 13px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+  }
+
+  #searchBtn:hover {
+    background: #B0C4D7;
+  }
+  .glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #2C325A;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #2C325A;
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #2C325A;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+/* End Add button */
+
+/* Start grid display */
+  div.grid-container {
+     /* margin-top: 50px;  */
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 100px;
+    color: #B0C4D7;
+  }
+  
+  div.grid-item {
+    background-color: #B0C4D7;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 100%;
+  }
+
+/* End grid display */
+
+/* Image adjust in the div */
+
+  .image {
+    width: 60%;
+    height: 50%;
+    margin-left: 15%;
+    margin-top: 2%;
+    border-radius: 4px;
+  }
+
+  /* Button adjust and style in the div */
+
+  #readBtn{
+    background-color: #2C325A;
+    color: white;
+    cursor: pointer;
+    /* position: absolute; */
+    bottom: 0;
+    right: 0;
+    margin-left: 65%;
+    width:85px;
+  }
+
+  
+/* Text styling in the div */
+
+  .attr {
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: oblique;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+/* Search Bar */
+
+.search{
+    float:right;
+    margin:7px;
+}
+     
+.search button{
+    background-color: #0074D9;
+    color: #f2f2f2;
+    float: right;
+    padding: 5px 10px;
+    margin-right: 16px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+} 
+
+/* Info of books */
+
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+     transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);  
+    text-align: center;
+    cursor:pointer;
+
+  }
+  .img-container:hover .image{
+    opacity: 0.3;
+  }
+  
+  .img-container:hover .middle {
+    opacity: 1;
+  }
+
+  .img-container:hover .middle_b {
+    opacity: 1;
+  }
+
+  .img-container:hover #readBtn{
+    opacity: 0;
+  }
+
+  .text {
+    background-color: #2C325A;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+
+  /* modal css */
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-container h2{
+    font-style: italic;
+    font-weight: bold;
+    color: #2C325A;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    overflow:scroll;
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 6% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Add new book form */
+
+form#bookForm{
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+    margin: auto;
+}
+
+form#bookForm label,
+form#bookForm input{
+    width: 100%;
+    padding: 10px 5px;
+}
+
+form#bookForm label {
+    font-weight: bold;
+}
+
+form#bookForm input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form#bookForm button {
+    background-color: #2C325A;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+form#bookForm button:hover {
+    background-color: #E09ED7;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+form#bookForm div{
+    margin-bottom: 20px;
+}
+
+/* authors drop down menu */
+#authorsDropdown,
+#genreDropdown {
+  background-color: #dacce9;
+  display: none;
+  margin-top: 5px;
+}
+
+.arrow-down {
+  cursor: pointer;
+  user-select: none;
+  margin-left: 5px;
+} 
+
+#genre {
+  width: 100%;
+  padding: 5px; 
+}
+
+.genre-option {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.button-container{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  color: white;
+  cursor: pointer;
+}

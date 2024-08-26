@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./assets/style/custom.css">
+    <link rel="stylesheet" href="./assets/style/read.css">
+</head>
+
+<body class="library">
+    <nav>
+        <img src="./assets/images/chapter3.png">
+
+        <ul id = "navbar">
+            <li id="homeLink"><a href="index.html">Home</a> </li>
+            <li><a href="library.html">Library</a></li>
+            <li id="userProfileLink"><a href="myProfile.html">My Profile</a></li>
+            <li id="adminProfileLink"><a href="admin.html">Admin Profile</a></li>
+            <!-- <li id="authLink">a</li> -->
+
+        </ul>
+    </nav>
+
+    <div class="belowNav">
+        <ul>
+            <li>
+                <form class="searchForm">
+                    <input type="text" id="inputId" placeholder="Search your book" name="search" autocomplete="off">
+                    <button id="searchBtn" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </li>
+        </ul>
+    </div>
+
+    <div class="grid-container" id="myGrid">
+    </div>
+
+
+    <footer>
+        <span>&copy;2023 All rights reserved</span>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+
+<script src="assets/scripts/read.js"></script>
+<script src="assets/scripts/authentication.js"></script>
+
+</body>
+
+</html>

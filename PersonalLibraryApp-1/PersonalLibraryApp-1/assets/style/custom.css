@@ -1,0 +1,507 @@
+/* NAVBAR START */
+nav {
+    color: white;
+    background-color: #a7bed3;
+    background-size: cover;
+    opacity: 0.9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0%;
+    width: 100%
+}
+
+nav img {
+    width: 70px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 100%;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    font-size: medium;
+    text-decoration: none;
+    padding: 10px 16px;
+}
+
+nav ul li a:hover {
+    background: linear-gradient(45deg, #a7bed3c2, #fcf5c7b9);
+
+}
+
+body.HomePage {
+
+    background: linear-gradient(90deg, #a7bed3c2, #fcf5c7b9);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+/* FOOTER START */
+footer {
+    background-color: rgb(128, 70, 0)590;
+    color: rgb(36, 29, 29);
+    text-decoration: none;
+    text-align: center;
+    bottom: 0;
+    /* in the end position 0*/
+    width: 100%;
+
+}
+
+/* DIV IN HOMEPAGE */
+
+div.homePageDiv0 {
+    background-image: url(../images/reading.jpg);
+    margin: 0%;
+    width: 100%;
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+
+}
+
+/* EXPRESSION STYLING */
+.title-word {
+    animation: color-animation 4s linear infinite;
+}
+
+.title-word-1 {
+    --color-1: #DF8453;
+    --color-2: #3D8DAE;
+    --color-3: #E4A9A8;
+}
+
+.title-word-2 {
+    --color-1: #DBAD4A;
+    --color-2: #ACCFCB;
+    --color-3: #17494D;
+}
+
+.title-word-3 {
+    --color-1: #ACCFCB;
+    --color-2: #E4A9A8;
+    --color-3: #ACCFCB;
+}
+
+.title-word-4 {
+    --color-1: #3D8DAE;
+    --color-2: #DF8453;
+    --color-3: #E4A9A8;
+}
+
+@keyframes color-animation {
+    0% {
+        color: var(--color-1)
+    }
+
+    32% {
+        color: var(--color-1)
+    }
+
+    33% {
+        color: var(--color-2)
+    }
+
+    65% {
+        color: var(--color-2)
+    }
+
+    66% {
+        color: var(--color-3)
+    }
+
+    99% {
+        color: var(--color-3)
+    }
+
+    100% {
+        color: var(--color-1)
+    }
+}
+
+/*some visual styles.*/
+
+.wordcontainer {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    height: 70vh
+}
+
+.title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 7.5vw;
+    text-transform: uppercase;
+}
+
+div.quote-container p {
+    color: #346a9c;
+    font-size: x-large;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: 30%;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: auto;
+}
+
+div.HomePage1 ul {
+    position: absolute;
+    margin-top: 70px;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+
+}
+
+div.homePageDiv1 ul li {
+    display: block;
+    text-align: right;
+    padding-right: 100px;
+
+}
+
+div.homePageDiv1 ul li a {
+    color: rgb(71, 62, 50);
+    font-size: large;
+    text-decoration: none;
+    padding: 10px;
+}
+
+div.homePageDiv1 ul li a:hover {
+    background: linear-gradient(45deg, #ffe2c8d4, #ffc7d7c7);
+    color: #346a9c;
+    transition: .2s ease;
+    font-size: large;
+    text-decoration: none;
+    padding: 10px;
+}
+
+#get-quote-btn {
+    text-align: center;
+    background: #2C325A;
+    color: white;
+    font-size: 13px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-left: 45%;
+    margin-top: 10px;
+    margin-bottom: auto;
+}
+
+/* HOMPEPAGE END */
+
+/* MY PROFILE PAGE START*/
+body.profile {
+    background-image: url(../images/profileW.jpg);
+    height: 100%;
+    width: 100%;
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: 120%;
+}
+
+html,
+body {
+    margin: 0px;
+    height: 85%;
+    width: 100%;
+}
+
+.profileDiv {
+    display: grid;
+    height: 100%;
+}
+
+.top-text {
+    text-align: center;
+    height: 40%;
+    color: #555;
+}
+
+.readAndTo {
+    display: flex;
+    position: relative;
+    margin-top: 10%;
+    top: -65%;
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.read {
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 25px;
+    width: 40%;
+    height: 100%;
+    background-color: #d79ece;
+    opacity: 0.77;
+    z-index: 1;
+}
+
+.read-text {
+    position: relative;
+    top: 120px;
+    left: -50px;
+    margin-left: 20px;
+    color: #555;
+}
+
+.read-img {
+    /* float:right;
+    width: 70%;
+    left: 150px;
+    top: 100px; */
+    margin: 5%;
+    padding: 0;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.read-img img {
+    /* align-items: left; */
+    /* right: 10px; */
+    height: 300px;
+    width: 300px;
+}
+
+.to-be-read {
+    border-radius: 25px;
+    width: 40%;
+    height: 100%;
+    background-color: #67468a;
+    opacity: 0.77;
+    z-index: 1;
+}
+
+.to-be-read h1 {
+    position: relative;
+    top: 120px;
+    left: 80px;
+    color: #ceb8b8;
+}
+
+#read-div:hover {
+    transform: scale(1.035);
+    opacity: 0.6;
+}
+
+#to-be-read-div:hover {
+    transform: scale(1.035);
+    opacity: 0.6;
+}
+
+/* MY PROFILE PAGE END*/
+
+
+
+/* LOGIN PAGE */
+body.loginpage {
+    background-image: url(../images/profileW.jpg);
+
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    z-index: 1;
+}
+
+.login-container {
+    background: linear-gradient(45deg, #ffe2c8d4, #ffc7d7c7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.login-container:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    color: #555;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    color: #888;
+}
+
+input {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #a7bed3;
+}
+
+button {
+    background-color: #a7bed3;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #fcf5c7;
+}
+
+form#loginForm span {
+    color: red;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+/* LOGIN PAGE END */
+
+/* progress bar  style*/
+
+@keyframes progress {
+    0% {
+        --percentage: 0;
+    }
+
+    100% {
+        --percentage: var(--value);
+    }
+}
+
+@property --percentage {
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 0;
+}
+
+[role="progressbar"] {
+    --percentage: var(--value);
+    --primary: #369;
+    --secondary: #adf;
+    --size: 100px;
+    animation: progress 2s 0.5s forwards;
+    width: var(--size);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+[role="progressbar"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(var(--primary) calc(var(--percentage) * 1%), var(--secondary) 0);
+    mask: radial-gradient(white 55%, transparent 0);
+    mask-mode: alpha;
+    -webkit-mask: radial-gradient(#0000 55%, #000 0);
+    -webkit-mask-mode: alpha;
+}
+
+[role="progressbar"]::after {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) '%';
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    color: var(--primary);
+}
+
+/* Progress Bar adjust in the div */
+
+.grid-item .progress {
+
+    bottom: 0;
+    right: 0;
+    margin-left: 65%;
+
+}
+
+/* START ADMIN PAGE */
+.admcred {
+    background: linear-gradient(45deg, #a7bed3c2, #fcf5c7b9);
+    color: #346a9c;
+    transition: .2s ease;
+    font-size: large;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.stats ul li {
+    display: inline;
+    align-items: center;
+}
+
+.stats ul li {
+    color: rgb(39, 2, 2);
+    font-size: medium;
+    text-decoration: none;
+    padding: 10px 16px;
+}
+
+.stats ul li {
+    background: linear-gradient(45deg, #ffe2c8d4, #ffc7d7c7);
+    cursor: pointer;
+}
+.usertable{
+    padding-top: 60px;
+}
+.usertable h1{
+    margin-left: 45%;
+}
+/* END ADMIN PAGE */
+
+/* TABLE STYLING */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+/* END OF TABLE */

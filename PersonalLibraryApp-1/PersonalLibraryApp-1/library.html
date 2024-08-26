@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./assets/style/custom.css">
+    <link rel="stylesheet" href="./assets/style/library.css">
+</head>
+
+<body class="library">
+    <nav>
+        <img src="./assets/images/chapter3.png">
+
+        <ul id = "navbar">
+            <li id="homeLink"><a href="index.html">Home</a> </li>
+            <li><a href="library.html">Library</a></li>
+            <li id="userProfileLink"><a href="myProfile.html">My Profile</a></li>
+            <li id="adminProfileLink"><a href="admin.html">Admin Profile</a></li>
+            <!-- <li id="authLink">a</li> -->
+
+        </ul>
+    </nav>
+
+    <div class="belowNav">
+        <ul>
+            <li>
+                <form class="searchForm">
+                    <input type="text" id="searchTitle" placeholder="Search your book" name="search" autocomplete="off"> 
+                    <button id="searchBtn" type="button"><i class="fa fa-search"></i></button>
+                </form>     
+            </li>
+            <li>
+                <button id="addBookBtn" class="glow-on-hover">Add a Book</button>
+            </li>
+            <li>
+                <button id="addAuthorBtn" class="glow-on-hover">Add an Author</button>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- <div id="searchResults"></div> -->
+
+   <div class="grid-container" id="myGrid">
+   </div>
+
+
+    <!-- Inside the body tag, but outside of other tags -->
+    
+    <!-- Read Me button -->
+    <div id="readModal" class="modal">
+        <div class="modal-content">
+            <div class="header-container">
+                <h2>Excellent Choice!</h2>
+                <span id="closeReadSpn" class="close">&times;</span>
+            </div>
+            <!-- <p>We hope you will like <h3 id="book-name"></h3> </p> -->
+              
+        </div>
+    </div>
+    <!-- END: Read Me Modal -->
+   
+
+    <!-- Add book form -->
+
+    <div id="addBookModal" class="modal">
+        <div class="modal-content">
+            <div class="header-container">
+                <h2>Add a new book</h2>
+                <span id="closeAddModalSpn" class="close">&times;</span>
+            </div>
+            
+            <form id="bookForm">
+                <div>
+                    <label for="bookTitle">Book Title</label>
+                    <input type="text" id="bookTitle" name="bookTitle" placeholder="Enter the book's title">
+                </div>
+        
+                <div>
+                    <label for="authors">Book Author/s</label>
+                    <div>
+                        <span class="arrow-down" onclick="toggleAuthorsDropdown()">▼</span>
+                        <div id="authorsDropdown">
+                            <!-- Dynamically generated checkboxes will go here -->
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="description">Book Description</label>
+                    <input type="description" id="description" name="description" placeholder="Enter the book's description">
+                </div>
+
+                <div>
+                    <label for="genre">Book Genre</label>
+                    <select id="genre" name="genre">
+                        <!-- Options will be dynamically added here -->
+                    </select>
+                </div>
+        
+                <div>
+                    <label for="image">Image</label>
+                    <input type="link" id="image" name="image" placeholder="Enter the image url" oninput="previewImage(this)"></textarea>
+                    <img id="imagePreview" src="" alt="Image Preview" style="max-width: 100%; max-height: 100px; margin-top: 10px; display: none;">
+                </div>
+                <div>
+                    <button id="submitBtn">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add author form -->
+
+    <div id="addAuthorModal" class="modal">
+        <div class="modal-content">
+            <div class="header-container">
+                <h2>Add a new author</h2>
+                <span id="closeAddAuthorModalSpn" class="close">&times;</span>
+            </div>
+            
+            <form id="authorForm">
+                <div>
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter the author's fullname">
+                </div>
+                
+                <div>
+                    <button id="submitAuthorBtn">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+   <!-- Edit book form modal -->
+
+<div id="editBookModal" class="modal">
+    <div class="modal-content">
+        <div class="header-container">
+            <h2>Edit book</h2>
+            <span id="closeEditModalSpn" class="close">&times;</span>
+        </div>
+        
+        <form id="editBookForm">
+            <div>
+                <label for="editBookTitle">Book Title</label>
+                <input type="text" id="editBookTitle" name="editBookTitle" value="">
+            </div>
+    
+            <div>
+                <label for="editAuthorDropdown">Book Author/s</label>
+                <div>
+                    <span class="arrow-down" onclick="toggleEditAuthorsDropdown()">▼</span>
+                    <div id="editAuthorDropdown">
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <label for="editDescription">Book Description</label>
+                <input type="description" id="editDescription" name="editDescription" value="">
+            </div>
+
+            <div>
+                <label for="editGenre">Book Genre</label>
+                <select id="editGenre" name="editGenre" value="">
+                </select>
+            </div>
+    
+            <div>
+                <label for="image">Image</label>
+                <input type="link" id="editBookCoverUrl" name="editBookCoverUrl" value="" oninput="previewImage(this)"></textarea>
+                <img id="imagePreview" src="" alt="Image Preview" style="max-width: 100%; max-height: 100px; margin-top: 10px; display: none;">
+            </div>
+            <input type="hidden" id="editBookId" name="editBookId">
+            <div>
+                <button id="submitEditBtn">Edit</button>
+                <button id="cancelEditBtn">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+        <!-- delete book modal -->
+    <div id="deleteBookModal" class="modal">
+        <div class="modal-content">
+        <span id="closeDeleteBookModalSpn" class="close">&times;</span>
+        <p>Are you sure you want to delete this book?</p>
+        <button id="confirmDeleteBtn">Confirm</button>
+        <button id="cancelDeleteBtn">Cancel</button>
+        </div>
+    </div>
+  
+    <footer>
+        <span>&copy;2023 All rights reserved</span>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    
+    <script src="assets/scripts/library.js"></script>
+    <script src="assets/scripts/authentication.js"></script>
+</body>
+
+
+</html>
